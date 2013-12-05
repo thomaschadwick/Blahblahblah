@@ -1,0 +1,40 @@
+{
+  "name" : "Blahblahblah",
+  "version" : "0.0.1",
+  "description" : "Turn a Facebook user's posts to just 'Blah blah blah'",
+  "options_page" : "options.html",
+  "page_action" : {
+    "default_icon" : {
+      "19": "sandwich-19.png"
+    },
+    "default_title" : "Blahblahblah",
+    "default_popup" : "options.html"
+  },
+
+  "background" : {
+    "scripts": ["background.js"]
+  },
+
+  "permissions" : [ 
+    "http://*.facebook.com/*",
+    "storage",
+    "activeTab"
+  ],
+  "icons" : {
+    "16" : "sandwich-16.png",
+    "48" : "sandwich-48.png",
+    "128" : "sandwich-128.png"
+  },
+
+  "content_scripts" : [
+    {
+      "matches" : [ 
+        "*://*.facebook.com/*"
+      ],
+      "js" : [ "contentscript.js" ],
+      "run_at" : "document_end",
+      "all_frames" : false
+    }
+  ],
+  "manifest_version": 2
+}
