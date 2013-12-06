@@ -20,7 +20,7 @@ function SaveOptions() {
 
 	setTimeout(function() {
 		status.innerHTML = "";
-	}, 750);
+	}, 2000);
 }
 
 function RestoreOptions() {
