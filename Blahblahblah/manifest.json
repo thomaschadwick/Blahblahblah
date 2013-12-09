@@ -1,13 +1,14 @@
 {
-  "name" : "Blahblahblah",
-  "version" : "0.0.1",
-  "description" : "Turn a Facebook user's posts to just 'Blah blah blah'",
+  "name" : "Blah blah blah",
+  "version" : "1.0.0",
+  "description" : "Turn a Facebook user's posts to just 'Blah blah blah' 
+  or anything you want!",
   "options_page" : "options.html",
   "page_action" : {
     "default_icon" : {
-      "19": "sandwich-19.png"
+      "19": "megaphone-16.png"
     },
-    "default_title" : "Blahblahblah",
+    "default_title" : "Blah blah blah",
     "default_popup" : "options.html"
   },
 
@@ -21,9 +22,9 @@
     "activeTab"
   ],
   "icons" : {
-    "16" : "sandwich-16.png",
-    "48" : "sandwich-48.png",
-    "128" : "sandwich-128.png"
+    "16" : "megaphone-16.png",
+    "48" : "megaphone-48.png",
+    "128" : "megaphone-128.png"
   },
 
   "content_scripts" : [
