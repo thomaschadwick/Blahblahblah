@@ -1,7 +1,12 @@
 // options.js
 
-// Save to localStorage
+document.addEventListener('DOMContentLoaded', RestoreOptions);
+document.querySelector('#save').addEventListener('click', SaveOptions);
+document.querySelector('#add').addEventListener('click', AddFriendName);
 
+
+
+// Save to localStorage
 function SaveOptions() {
 	var replaceValue = document.getElementById("replaceValue").value;
 	localStorage["replaceValue"] = replaceValue;
@@ -21,6 +26,18 @@ function SaveOptions() {
 	setTimeout(function() {
 		status.innerHTML = "";
 	}, 2000);
+
+	setTimeout(function() {
+		UpdateScreen();
+	}, 2000)
+	// need to call it twice for some reason... first call doesn't update
+	UpdateScreen();
+}
+
+function UpdateScreen() {
+	chrome.tabs.query({active: true, currentWindow: true}, function(tabs) {
+  		chrome.tabs.sendMessage(tabs[0].id, {method: "processFriends"})
+	});
 }
 
 function RestoreOptions() {
@@ -108,6 +125,3 @@ function DeleteFriend(el) {
 	}
 }
 
-document.addEventListener('DOMContentLoaded', RestoreOptions);
-document.querySelector('#save').addEventListener('click', SaveOptions);
-document.querySelector('#add').addEventListener('click', AddFriendName);

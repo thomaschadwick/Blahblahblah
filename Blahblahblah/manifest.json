@@ -17,16 +17,15 @@
   },
 
   "permissions" : [ 
-    "http://*.facebook.com/*",
+    "*://*.facebook.com/*",
     "storage",
-    "activeTab"
+    "tabs"
   ],
   "icons" : {
     "16" : "megaphone-16.png",
     "48" : "megaphone-48.png",
     "128" : "megaphone-128.png"
   },
-
   "content_scripts" : [
     {
       "matches" : [ 

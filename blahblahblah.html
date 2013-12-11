@@ -2,6 +2,7 @@
 <html>
 	<head>
 		<link type="text/css" rel="stylesheet" href="./css/bootstrap.min.css">
+		<link rel="chrome-webstore-item" href="https://chrome.google.com/webstore/detail/mdaclnanjhpedhbolobmkjgmjalmljkh">
 		<style>
 			.center {
 				text-align: center;
@@ -16,6 +17,13 @@
 			.center-text {
 				text-align: center;
 			}
+			footer {
+				border-top: 1px solid #c0c0c0;
+				background-color: #fafafa;
+				padding-top: 25px;
+				padding-bottom: 25px;
+				text-align: center;
+			}
 		</style>
 	</head>
 
@@ -24,7 +32,7 @@
 			<h1><img src="./megaphone-128.png" class="jumbo-image">Blah blah blah</h1>
 			<p class="center">Control what your friends are saying on Facebook!</p>
 			<br>
-			<p class="center"><a class="btn btn-primary btn-lg" role="button"><span class="glyphicon glyphicon-cloud-download"></span> Download Now for Google Chrome </a></p>
+			<p class="center"><a id="install" class="btn btn-primary btn-lg" role="button" onclick="chrome.webstore.install()"><span class="glyphicon glyphicon-cloud-download"></span> Add to Chrome</a></p>
 		</section>
 		<article class="container">
 			<section class="row">
@@ -34,10 +42,24 @@
 			</section>
 			<br>
 			<section class="row">
-				<div class="col-md-12">
+				<div class="col-md-12 center-text">
 					<p><img src="./blahblahblah-screenshot3.png"></p>
 				</div>
 			</section>
 		</article>
+		<footer>
+			Brought to you by <a href="http://www.chadwick.io">Thomas Chadwick!</a> <a href="https://twitter.com/TommyChadwick">Tweet me!</a> <a href="https://github.com/thomaschadwick/Blahblahblah">Fork this!</a>
+			<br>
+		</footer>
+		<script>
+		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+		  ga('create', 'UA-46258960-1', 'chadwick.io');
+		  ga('send', 'pageview');
+
+		</script>
 	</body>
 </html>	
